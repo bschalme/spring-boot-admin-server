@@ -4,9 +4,9 @@ EXPOSE 8080
 
 LABEL maintainer="Brian Schalme <bschalme@airspeed.ca>"
 
-COPY . /opt/spring-boot-admin-server/
-WORKDIR /opt/spring-boot-admin-server/
-RUN ./gradlew build
+# COPY . /opt/spring-boot-admin-server/
+# WORKDIR /opt/spring-boot-admin-server/
+# RUN ./gradlew build
 
 COPY build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar
 WORKDIR /opt
