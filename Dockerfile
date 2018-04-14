@@ -7,10 +7,7 @@ LABEL maintainer="Brian Schalme <bschalme@airspeed.ca>"
 
 COPY . /opt/spring-boot-admin-server/
 WORKDIR /opt/spring-boot-admin-server/
-RUN ./gradlew build
+RUN ./gradlew build && cp ./build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar && ./gradlew clean
 
-RUN ls -l ./build/libs/
-RUN cp ./build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar
-RUN ./gradlew clean
 WORKDIR /opt
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "spring-boot-admin-server.jar"]
