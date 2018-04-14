@@ -9,7 +9,7 @@ COPY . /opt/spring-boot-admin-server/
 WORKDIR /opt/spring-boot-admin-server/
 RUN ./gradlew build
 
-COPY build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar
+COPY ./build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar
 RUN ./gradlew clean
 WORKDIR /opt
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "spring-boot-admin-server.jar"]
