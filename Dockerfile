@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-VOLUNE /config
+VOLUME /config
 EXPOSE 8080
 
 LABEL maintainer="Brian Schalme <bschalme@airspeed.ca>"
