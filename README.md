@@ -1,5 +1,8 @@
 # spring-boot-admin-server
 
+[![Docker Automated buil](https://img.shields.io/docker/automated/bschalme/spring-boot-admin-server.svg?style=flat-square)](https://hub.docker.com/r/bschalme/spring-boot-admin-server/builds/)
+[![Image Size](https://images.microbadger.com/badges/image/bschalme/spring-boot-admin-server.svg)](https://microbadger.com/images/bschalme/spring-boot-admin-server)
+
 This is a Docker-ized version of codecentric AG's [Spring Boot Admin](https://github.com/codecentric/spring-boot-admin).
 
 Build the Spring Boot Admin Server as you would any other Gradle app:
