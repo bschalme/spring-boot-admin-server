@@ -37,9 +37,10 @@ dependencyManagement {
 
 dependencies {
     compile('de.codecentric:spring-boot-admin-starter-server:1.5.7')
-    compile('de.codecentric:spring-boot-admin-server-ui:1.5.7')
+    compile('de.codecentric:spring-boot-admin-server-ui-login:1.5.7')
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+	compile('org.springframework.boot:spring-boot-starter-web')
+// 	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
