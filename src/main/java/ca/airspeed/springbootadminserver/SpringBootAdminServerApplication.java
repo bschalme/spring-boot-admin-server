@@ -7,14 +7,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 
 import de.codecentric.boot.admin.config.AdminServerProperties;
 import de.codecentric.boot.admin.config.EnableAdminServer;
 
 @SpringBootApplication
 @EnableAdminServer
-// @EnableDiscoveryClient
+@EnableDiscoveryClient
 public class SpringBootAdminServerApplication {
 
     public static void main(String[] args) {
@@ -51,7 +50,7 @@ public class SpringBootAdminServerApplication {
 
             // Requests for the login page and the static assets are allowed
             http.authorizeRequests()
-                .antMatchers("/login.html", "/**/*.css", "/img/**", "/third-party/**")
+                .antMatchers("/login.html", "/**/*.css", "/img/**", "/third-party/**", "/health/**", "/info/**")
                 .permitAll();
             // ... and any other request needs to be authorized
             http.authorizeRequests().antMatchers("/**").authenticated();

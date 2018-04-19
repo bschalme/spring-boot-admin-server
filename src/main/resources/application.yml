@@ -5,7 +5,7 @@ eureka:
       
 spring:
   application:
-    name: spring-boot-admin-server
+    name: Spring Boot Admin Server
   boot:
     admin:
       client:
