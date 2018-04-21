@@ -9,7 +9,7 @@ COPY . /opt/spring-boot-admin-server/
 WORKDIR /opt/spring-boot-admin-server/
 RUN ./gradlew build && \
   cp ./build/libs/spring-boot-admin-server-*.jar /opt/spring-boot-admin-server.jar && \
-  ./gradlew clean &&\
+  rm -rf /opt/spring-boot-admin-server/* && \
   rm -rf ~/.gradle/
 
 WORKDIR /opt
